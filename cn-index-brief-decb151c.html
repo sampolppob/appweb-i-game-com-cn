@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>再次访问 bet365 · 收藏与持续关注</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #f5f7fa;
+            color: #1f2a3a;
+            line-height: 1.7;
+        }
+
+        /* hero 深色区 */
+        .hero {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1a2f44 100%);
+            color: #e8edf2;
+            padding: 5rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            right: -60px;
+            top: -60px;
+            width: 240px;
+            height: 240px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 50%;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+        }
+
+        .hero .sub {
+            font-size: 1.1rem;
+            max-width: 640px;
+            margin: 0 auto 1.5rem;
+            color: #b8ccdd;
+            font-weight: 300;
+        }
+
+        .hero .badge {
+            display: inline-block;
+            background: #d4af37;
+            color: #0b1a2e;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.25rem 1rem;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 1.2rem;
+        }
+
+        .hero .meta-hint {
+            font-size: 0.9rem;
+            color: #7a96b0;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 1.5rem;
+            margin-top: 1rem;
+            display: inline-block;
+        }
+
+        /* 浅色正文区 */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            padding: 3rem 0;
+        }
+
+        .section-light {
+            background: #ffffff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        .section-alt {
+            background: #f0f3f7;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            align-items: start;
+        }
+
+        @media (max-width: 700px) {
+            .two-col {
+                grid-template-columns: 1fr;
+                gap: 1.8rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 550;
+            margin-bottom: 1.2rem;
+            letter-spacing: -0.01em;
+            color: #132030;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #1e3349;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #2b3e55;
+        }
+
+        .highlight-link {
+            color: #b8860b;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(184, 134, 11, 0.35);
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .highlight-link:hover {
+            color: #8b6914;
+            border-bottom-color: #8b6914;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0 0.5rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 14px;
+            padding: 1.8rem 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            border: 1px solid #eef2f6;
+            transition: transform 0.15s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+        }
+
+        .card .icon {
+            font-size: 1.8rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #3c4f65;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #dee5ed;
+            padding: 1.2rem 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 550;
+            font-size: 1.05rem;
+            color: #132030;
+            margin-bottom: 0.3rem;
+        }
+
+        .faq-a {
+            color: #3f546d;
+            font-size: 0.95rem;
+        }
+
+        .footer-links {
+            background: #eaeef4;
+            padding: 2.5rem 0 2rem;
+            border-top: 1px solid #d6dee8;
+            text-align: center;
+        }
+
+        .footer-links .inner {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.2rem 2rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a {
+            color: #2c4a6b;
+            text-decoration: none;
+            border-bottom: 1px dotted #a0b8cf;
+        }
+
+        .footer-links a:hover {
+            color: #b8860b;
+            border-bottom-color: #b8860b;
+        }
+
+        .footer-note {
+            margin-top: 1.8rem;
+            font-size: 0.8rem;
+            color: #6a7f98;
+        }
+
+        .btn-ghost {
+            display: inline-block;
+            border: 1px solid rgba(255,255,255,0.25);
+            padding: 0.5rem 1.5rem;
+            border-radius: 40px;
+            color: #e0e9f2;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: background 0.2s;
+            margin-top: 0.5rem;
+        }
+
+        .btn-ghost:hover {
+            background: rgba(255,255,255,0.06);
+            border-color: rgba(255,255,255,0.5);
+        }
+
+        .dot-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .dot-list li {
+            padding-left: 1.2rem;
+            position: relative;
+            margin-bottom: 0.6rem;
+            color: #2b3e55;
+        }
+
+        .dot-list li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #b8860b;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- hero 深色区：再次访问与收藏 -->
+    <header class="hero">
+        <div class="badge">收藏 · 持续访问</div>
+        <h1>再次回到熟悉的地方</h1>
+        <p class="sub">将 <a href="https://cn-index-bet365.com" class="highlight-link" style="color:#d4af37; border-bottom-color: rgba(212,175,55,0.5);">bet365</a> 加入书签，让每次访问都直接、稳定。无论是赛事高峰还是日常浏览，保持入口在手边。</p>
+        <a href="https://cn-index-bet365.com" class="btn-ghost">bet365</a>
+        <div class="meta-hint">常用链接 · 收藏夹常驻</div>
+    </header>
+
+    <!-- 优势区：轻量卡片，信息密度较高 -->
+    <section class="section-light">
+        <div class="container">
+            <h2>为什么值得保持关注</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="icon">📌</div>
+                    <h3>收藏即快捷</h3>
+                    <p>一次收藏，后续访问减少中间步骤。无论何时打开，直达<a href="https://cn-index-bet365.com" class="highlight-link">bet365</a>最新内容。</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🔄</div>
+                    <h3>持续可用性</h3>
+                    <p>平台长期维护域名与访问通道，适合作为常驻书签。定期回来确认状态，保持连接。</p>
+                </div>
+                <div class="card">
+                    <div class="icon">📋</div>
+                    <h3>信息连贯</h3>
+                    <p>再次访问无需重新适应，界面与功能结构统一，适合深度使用与多设备同步。</p>
+                </div>
+                <div class="card">
+                    <div class="icon">⏱️</div>
+                    <h3>节奏可控</h3>
+                    <p>按自己的频率访问，不需要频繁刷新。保存的链接可长期复用，降低记忆成本。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 说明区：从再次访问和收藏切入 -->
+    <section class="section-alt">
+        <div class="container two-col">
+            <div>
+                <h2>把入口放在触手可及处</h2>
+                <p>很多用户习惯将常用服务固定到浏览器书签栏或收藏夹。对于需要定期查看的页面，一个稳定、直接的入口能节省大量时间。<a href="https://cn-index-bet365.com" class="highlight-link">bet365</a> 作为持续运营的平台，其域名具有长期参考价值。</p>
+                <p>我们建议用户采用以下方式保持连接：</p>
+                <ul class="dot-list">
+                    <li>将当前页面加入浏览器书签（快捷键 Ctrl+D / Cmd+D）</li>
+                    <li>在移动端添加到主屏幕（iOS Safari / Android Chrome）</li>
+                    <li>每隔一段时间回访，确认访问路径是否更新</li>
+                </ul>
+            </div>
+            <div>
+                <h3>收藏之外的持续关注</h3>
+                <p>除了书签，还可以通过历史记录、分组标签等方式保留访问轨迹。保持对 <a href="https://cn-index-bet365.com" class="highlight-link">bet365</a> 的关注，意味着你可以在需要时第一时间获取信息，而不必临时搜索或询问。</p>
+                <p>对于经常使用的用户，我们推荐在桌面端建立专用书签文件夹，并同步至所有设备。这种方式在赛事密集期间尤为实用，减少每次输入的繁琐。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ 摘要 -->
+    <section class="section-light">
+        <div class="container">
+            <h2>常见关注点 · 简要</h2>
+            <div class="faq-item">
+                <div class="faq-q">为什么建议将 bet365 收藏而不是每次搜索？</div>
+                <div class="faq-a">搜索可能受浏览器、网络环境或临时页面影响，收藏的链接更直接且可离线查看标题。长期使用收藏夹可形成稳定的访问习惯。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">收藏的链接会失效吗？如何应对？</div>
+                <div class="faq-a">平台通常保持主要域名的稳定性。如遇访问变化，可通过备用路径或社区渠道获取最新入口。定期回访本页可同步信息。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">移动端与桌面端收藏是否同步？</div>
+                <div class="faq-a">使用同一浏览器账号登录即可同步书签。iOS 和 Android 均支持跨设备收藏，建议开启同步功能。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">除了收藏，还有其他持续关注的方式吗？</div>
+                <div class="faq-a">可将页面设置为浏览器起始页的一部分，或使用网页剪藏工具保存快照。保持关注的核心是建立低摩擦的访问路径。</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部链接区 -->
+    <footer class="footer-links">
+        <div class="inner">
+            <a href="https://cn-index-bet365.com">bet365</a>
+            <a href="#">收藏指南</a>
+            <a href="#">访问提示</a>
+            <a href="#">设备同步</a>
+            <a href="#">书签管理</a>
+        </div>
+        <div class="footer-note">
+            保持访问节奏 · 入口常在手边
+        </div>
+        <div class="footer-note" style="margin-top:0.6rem; opacity:0.65;">
+            cn-index-bet365.com · 信息页
+        </div>
+    </footer>
+
+</body>
+</html>
